@@ -1,10 +1,10 @@
 @extends('template')
 @section('konten')
     <div class="card mt-3 mb-3">
-        <div class="card-header text-center">
+        <div class="card-header">
             Edit Data Siswa
-            <div class="card-body">
-        </div>
+          </div>
+          <div class="card-body">
             <form action="/update/{{$data->id}}" method="post">
                 {{csrf_field()}}
                 {{method_field('put')}}
@@ -12,6 +12,7 @@
                   <label class="form-label">Nama</label>
                   <input type="text" class="form-control" name="nama" value="{{$data->nama}}" required>                  
                 </div>
+                
                 <div class="mb-3">
                   <label class="form-label">Usia</label>
                   <input type="text" class="form-control" name="usia" value="{{$data->usia}}" required>

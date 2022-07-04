@@ -47,9 +47,9 @@
                 <b>Page : </b>   {{$data->currentPage()}} | {{$data->perPage()}}
 
             </div>
-            <div class="col">
+            {{-- <div class="col">
                 <a href="/getAll">Tampilkan semua</a>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
