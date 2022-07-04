@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SiswaModel extends Model
+class Kontak extends Model
 {
     use HasFactory;
-    protected $table = 'siswa';
-    protected $fillable = ['nama','usia','alamat'];
+    protected $table = 'kontak';
+    public function siswa(){
+        return $this->belongsTo('App\Models\Siswa');
+    }
 }

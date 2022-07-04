@@ -14,7 +14,8 @@
                 <tr  class="text-center">
                     <th>No</th>
                     <th>Nama</th>
-                    <th>Usia</th>
+                    {{-- <th>Usia</th> --}}
+                    <th>No Telepon</th>
                     <th>Alamat</th>
                     <th>Action</th>
                 </tr>
@@ -26,7 +27,8 @@
                 <tr>
                     <td class="text-center">{{$no++}}</td>
                     <td>{{$d->nama}}</td>
-                    <td  class="text-center">{{$d->usia}}</td>
+                    {{-- <td  class="text-center">{{$d->usia}}</td> --}}
+                    <td  class="text-center">{{$d->kontak->nomor_telepon}}</td>
                     <td>{{$d->alamat}}</td>
                     <td class="text-center">
                         <a href="/siswa/detail/{{$d->id}}" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>

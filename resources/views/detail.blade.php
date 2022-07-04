@@ -11,6 +11,8 @@
                 <tr>
                     <th>Nama</th>
                     <th>Usia</th>
+                    <th>No Telepon</th>
+                    <th>Email</th>
                     <th>Alamat</th>
                     <th class="text-center">Acttion</th>
 
@@ -21,6 +23,8 @@
                 <tr>
                     <td>{{$data->nama}}</td>
                     <td>{{$data->usia}}</td>
+                    <td>{{$data->kontak->nomor_telepon}}</td>
+                    <td>{{$data->kontak->email}}</td>
                     <td>{{$data->alamat}}</td>
                     <td class="text-center">
                         <a href="/siswa/edit/{{$data->id}}" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
