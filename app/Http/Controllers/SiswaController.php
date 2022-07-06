@@ -11,7 +11,7 @@ class SiswaController extends Controller
 {
     //
     public function getData(){
-        $data =Siswa::simplePaginate(10);
+        $data =Siswa::simplePaginate(10); #if use query builder $data = DB::table('table_name')->get();
         return view('siswa',['data'=>$data]);
     }
 
@@ -21,6 +21,7 @@ class SiswaController extends Controller
     }
 
     public function input(Request $request){
+        // if use query builder DB::table('table_name')->insert(['column' => $request->name ]);
     Siswa::create([
             'nama'=>$request->nama,
             'usia'=>$request->usia,
@@ -31,22 +32,25 @@ class SiswaController extends Controller
     }
 
     public function getById($id){
+        // if use query builder $data = DB::table('table_name')->where('id',$id)->get();
         $data =Siswa::find($id);
-        // dd($data);
         return view('detail',['data'=>$data]);
     }
 
     public function delete($id){
+        // if use query builder DB::table('table_name')->where('id',$id)->delete();
     Siswa::find($id)->delete();
         return redirect('/siswa');
     }
 
     public function edit($id){
+        // if use query builder $data = DB::table('table_name')->where('id',$id)->get();
         $data =Siswa::find($id);
         return view('edit',['data'=>$data]);
     }
 
     public function update($id, Request $request){
+        // if use query builder DB::table('tableName')->where('id',$request->id)->update(['column' => $request->name]);
         $data =Siswa::find($id);
         $data->nama = $request->nama;
         $data->usia = $request->usia;
