@@ -17,6 +17,16 @@
                   <label class="form-label">Usia</label>
                   <input type="text" class="form-control" name="usia" value="{{$data->usia}}" required>
                 </div>
+                
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="text" class="form-control" name="email" value="{{$data->kontak->email}}" required>
+                </div>
+                
+                <div class="mb-3">
+                  <label class="form-label">No Telp</label>
+                  <input type="text" class="form-control" name="no_telp" value="{{$data->kontak->nomor_telepon}}" required>
+                </div>
 
                 <div class="mb-3">
                   <label class="form-label">Alamat</label>

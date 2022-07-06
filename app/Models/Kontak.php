@@ -9,6 +9,7 @@ class Kontak extends Model
 {
     use HasFactory;
     protected $table = 'kontak';
+    protected $fillable = ['email','nomor_telepon'];
     public function siswa(){
         return $this->belongsTo('App\Models\Siswa');
     }

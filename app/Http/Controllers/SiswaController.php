@@ -50,6 +50,8 @@ class SiswaController extends Controller
         $data =Siswa::find($id);
         $data->nama = $request->nama;
         $data->usia = $request->usia;
+        $data->kontak->email = $request->email;
+        $data->kontak->nomor_telepon = $request->no_telp;
         $data->alamat = $request->alamat;
         $data->save();
         return view('detail',['data'=>$data]);

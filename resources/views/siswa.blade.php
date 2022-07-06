@@ -6,10 +6,10 @@
     </div>
     <div class="card-body">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <i class="bi bi-plus-circle"></i> Tambah Data
         </button>
-        <table class="table table-striped table-bordered table-hover mt-3">
+        <table class="table table-striped table-bordered table-hover mt-3 data">
             <thead>
                 <tr  class="text-center">
                     <th>No</th>
@@ -41,10 +41,10 @@
         </table>
         <div class="row">
             <div class="col">
-                {{$data->links()}}
+                {{-- {{$data->links()}} --}}
             </div>
             <div class="col">
-                <b>Page : </b>   {{$data->currentPage()}} | {{$data->perPage()}}
+                {{-- <b>Page : </b>   {{$data->currentPage()}} | {{$data->perPage()}} --}}
 
             </div>
             {{-- <div class="col">
