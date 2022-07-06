@@ -27,7 +27,7 @@
                 <tr>
                     <td class="text-center">{{$no++}}</td>
                     <td>{{$d->nama}}</td>
-                    {{-- <td  class="text-center">{{$d->usia}}</td> --}}
+                    {{-- <td  class="text-center-">{{$d->usia}}</td> --}}
                     <td  class="text-center">{{$d->kontak->nomor_telepon}}</td>
                     <td>{{$d->alamat}}</td>
                     <td class="text-center">

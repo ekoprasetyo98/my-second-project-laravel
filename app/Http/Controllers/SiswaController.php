@@ -11,14 +11,11 @@ class SiswaController extends Controller
 {
     //
     public function getData(){
-        $data =Siswa::simplePaginate(10); #if use query builder $data = DB::table('table_name')->get();
+        $data =Siswa::paginate(); #if use query builder $data = DB::table('table_name')->get();
         return view('siswa',['data'=>$data]);
     }
 
-    public function getAllData(){
-        $data =Siswa::simplePaginate(100);
-        return view('siswa',['data'=>$data]);
-    }
+    
 
     public function input(Request $request){
         // if use query builder DB::table('table_name')->insert(['column' => $request->name ]);
