@@ -30,7 +30,7 @@
                     {{-- <td  class="text-center-">{{$d->usia}}</td> --}}
                     <td  class="text-center">{{$d->kontak->nomor_telepon}}</td>
                     <td>{{$d->alamat}}</td>
-                    <td class="text-center">
+                    <td class="text-center d-flex justify-content-between">
                         <a href="/siswa/detail/{{$d->id}}" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>
                         <a href="/siswa/edit/{{$d->id}}" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
                         <a href="/siswa/delete/{{$d->id}}" class="btn btn-danger" onclick="return confirm('Apakah anda ingin menghapus data?')"><i class="bi bi-trash-fill"></i></a>

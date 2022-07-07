@@ -11,7 +11,7 @@ class SiswaController extends Controller
 {
     //
     public function getData(){
-        $data =Siswa::paginate(); #if use query builder $data = DB::table('table_name')->get();
+        $data =Siswa::all(); #if use query builder $data = DB::table('table_name')->get();
         return view('siswa',['data'=>$data]);
     }
 
